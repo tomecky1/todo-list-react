@@ -1,0 +1,173 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    background-color: #f2f2f2;
+    padding: 30px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 20px;
+}
+
+.section {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 1fr);    
+    background-color: #f2f2f2;
+}
+
+.section__title {
+    padding: 20px;
+}
+
+.section__item--h2 {
+    margin: 0;
+    padding: 20px;
+    border-bottom: 3px solid #f2f2f2;
+}
+
+.todoList {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #f2f2f2;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.section__item--h2 {
+    flex-grow: 2;
+}
+
+.buttonHideDoneTasks {
+    flex-grow: 1;
+    border: 0;
+    color: teal;
+    background-color: #fff;
+    transition: 1.5s all;
+}
+
+.buttonHideDoneTasks:hover {
+    color: hsl(180, 100%, 35%);
+}
+
+.buttonDoneAllTasks {
+    flex-grow: 1;
+    border: 0;
+    color: teal;
+    background-color: #fff;
+    transition: 1.5s all;
+}
+
+.buttonDoneAllTasks:hover {
+    color: hsl(180, 100%, 35%);
+}
+
+.buttonDoneAllTasks:disabled {
+    display: none;
+}
+
+.list {
+    padding: 0;
+    text-align:left;
+    transition: 1s;
+}
+
+.list__li {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    background-color: #fff;
+    flex-wrap: wrap;
+    border-bottom: 3px solid #f2f2f2;
+    padding: 20px;
+}
+
+.list__item--done {
+    text-decoration: line-through;
+}
+
+.tasks__item--hidden {
+    display: none;
+}   
+
+.buttonRemove {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: crimson;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.buttonRemove:hover {
+    background-color: #ff0000;
+}
+
+.buttonCheck {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: green;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.buttonCheck:hover {
+    background-color: hsl(120, 100%, 35%);
+}
+
+
+@media (max-width: 767px){
+    .form {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .form__button {
+        margin-top: 30px;
+        border: none;
+        background-color: teal;
+        color: #fff;
+        font-weight: 700;
+        padding: 10px 20px;
+        cursor: pointer;
+        width: 100%;
+    }
+    .form__input {    
+        border: 2px solid #f2f2f2;
+        flex-basis: 100%;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        transition: 1s;
+    }
+
+    .js-buttons {
+        text-align: center;
+    }
+}
