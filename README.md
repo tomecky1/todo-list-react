@@ -6,6 +6,10 @@ DESCRIPTION:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## DEMO
+
+[PAGE PREVIEW](https://tomecky1.github.io/todo-list-react/)
+
 ## Available Scripts
 
 In the project directory, you can run:
