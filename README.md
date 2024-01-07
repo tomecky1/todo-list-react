@@ -48,3 +48,4 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 2. CSS 3
 3. HTML 5
 4. Webpack
+5. Babel
