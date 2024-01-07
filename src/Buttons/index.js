@@ -1,5 +1,5 @@
 const Buttons = (props) => {
-    if (props.tasks.length === 0) {
+    if (props.tasks.Length === 0) {
         return null;
     }
     return (
