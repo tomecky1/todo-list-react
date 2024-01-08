@@ -1,15 +1,15 @@
-const Buttons = (props) => {
-    if (props.tasks.Length === 0) {
+const Buttons = ({ tasks, hideDoneTasks }) => {
+    if (tasks.Length === 0) {
         return null;
     }
     return (
         <div className="buttons">
             <button className="buttonHideDoneTasks">
-                {props.hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
+                {hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
             </button>
             <button
                 className="buttonDoneAllTasks"
-                disabled={props.tasks.every(({ done }) => done)}
+                disabled={tasks.every(({ done }) => done)}
             >
                 Ukończ wszystkie
             </button>
