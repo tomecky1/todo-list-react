@@ -1,6 +1,6 @@
 # TODO tasks list
 
-![PAGE SCREENSHOT](/src/react-todo.png "TO-DO list")
+![PAGE SCREENSHOT](/src/todo-react.png "TO-DO list")
 
 DESCRIPTION:
 
