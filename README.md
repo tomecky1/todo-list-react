@@ -44,9 +44,9 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 **Technology used in this project includes:**
 
-1. JavaScript ECMAScript15
-2. CSS 3
-3. HTML 5
-4. Webpack
-5. Babel
-6. Node.js
+- JavaScript ECMAScript15
+- CSS 3
+- HTML 5
+- Webpack
+- Babel
+- Node.js
