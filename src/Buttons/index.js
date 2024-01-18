@@ -1,10 +1,11 @@
-const Buttons = ({ tasks, hideDone }) => {
+
+const Buttons = ({ tasks, hideDone, toggleHideDone }) => {
     if (tasks.Length === 0) {
         return null;
     }
     return (
         <div className="buttons">
-            <button className="buttonhideDone">
+            <button className="buttonhideDone" onClick={toggleHideDone}>
                 {hideDone ? "Pokaż" : "Ukryj"} ukończone
             </button>
             <button
