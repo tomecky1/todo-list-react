@@ -1,11 +1,11 @@
-const Buttons = ({ tasks, hideDoneTasks }) => {
+const Buttons = ({ tasks, hideDone }) => {
     if (tasks.Length === 0) {
         return null;
     }
     return (
         <div className="buttons">
-            <button className="buttonHideDoneTasks">
-                {hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
+            <button className="buttonhideDone">
+                {hideDone ? "Pokaż" : "Ukryj"} ukończone
             </button>
             <button
                 className="buttonDoneAllTasks"

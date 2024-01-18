@@ -2,12 +2,14 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 1.7;
   background-color: #ddd;
@@ -25,7 +27,7 @@ body {
 .section {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: repeat(2, 1fr);    
+  grid-template-rows: repeat(2, 1fr);
   background-color: #fff;
   margin-bottom: 20px;
 }
@@ -55,7 +57,7 @@ body {
   flex-grow: 2;
 }
 
-.buttonHideDoneTasks {
+.buttonhideDone {
   flex-grow: 1;
   border: 0;
   color: teal;
@@ -63,7 +65,7 @@ body {
   transition: 1.5s all;
 }
 
-.buttonHideDoneTasks:hover {
+.buttonhideDone:hover {
   color: hsl(180, 100%, 35%);
 }
 
@@ -86,7 +88,7 @@ body {
 .list {
   list-style: none;
   padding: 0;
-  text-align:left;
+  text-align: left;
   transition: 1s;
 }
 
@@ -105,7 +107,7 @@ body {
 
 .list__item--hidden {
   display: none;
-}   
+}
 
 .buttonRemove {
   width: 40px;
@@ -137,36 +139,35 @@ body {
   background-color: hsl(120, 100%, 35%);
 }
 
-
-@media (max-width: 767px){
+@media (max-width: 767px) {
   .form {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
   .form__button {
-      margin-top: 30px;
-      border: none;
-      background-color: teal;
-      color: #fff;
-      font-weight: 700;
-      padding: 10px 20px;
-      cursor: pointer;
-      width: 100%;
+    margin-top: 30px;
+    border: none;
+    background-color: teal;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
   }
-  .form__input {    
-      border: 2px solid #f2f2f2;
-      flex-basis: 100%;
+  .form__input {
+    border: 2px solid #f2f2f2;
+    flex-basis: 100%;
   }
 
   .buttons {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      transition: 1s;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    transition: 1s;
   }
 
   .js-buttons {
-      text-align: center;
+    text-align: center;
   }
 }
