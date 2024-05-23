@@ -49,6 +49,9 @@ function App() {
     ]);
   };
 
+  const localStorageTasks = localStorage.getItem("tasks");
+  console.log(localStorageTasks);
+
   return (
     <Container>
       <Header />
@@ -59,7 +62,7 @@ function App() {
       <Section
         title="Lista zadań:"
         extraHeaderContent={<Buttons tasks={tasks} hideDone={hideDone} toggleHideDone={toggleHideDone} setAllDone={setAllDone} />}
-        children={<Tasks tasks={tasks} hideDone={hideDone} removeTask={removeTask} toggleTaskDone={toggleTaskDone} />}
+        children={<Tasks tasks={tasks} hideDone={hideDone} removeTask={removeTask} toggleTaskDone={toggleTaskDone} localStorageTasks={localStorageTasks} />}
       />
     </Container>
   );
