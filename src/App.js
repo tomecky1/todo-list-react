@@ -49,7 +49,8 @@ function App() {
     ]);
   };
 
-  const localStorageTasks = localStorage.getItem("tasks");
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+  const localStorageTasks = JSON.parse(localStorage.getItem("tasks"));
   console.log(localStorageTasks);
 
   return (

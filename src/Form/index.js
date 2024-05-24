@@ -8,7 +8,6 @@ const Form = ({ addNewTask }) => {
         event.preventDefault();
         addNewTask(newTaskContent.trim());
         setNewTaskContent("");
-        localStorage.setItem("tasks", JSON.stringify(newTaskContent));
     };
 
     return (
