@@ -7,11 +7,13 @@ import Container from "./Container";
 import { useState } from "react";
 
 function App() {
+
+  const localStorageTasks = JSON.parse(localStorage.getItem("tasks"));
+  console.log(localStorageTasks);
   const [hideDone, setHideDone] = useState(false);
-  const [tasks, setTasks] = useState([
-    { id: 1, content: "przejść na Reacta", done: false },
-    { id: 2, content: "wypić kawę", done: true }
-  ]);
+  const [tasks, setTasks] = useState(localStorageTasks || []);
+
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
@@ -48,10 +50,6 @@ function App() {
       },
     ]);
   };
-
-  localStorage.setItem("tasks", JSON.stringify(tasks));
-  const localStorageTasks = JSON.parse(localStorage.getItem("tasks"));
-  console.log(localStorageTasks);
 
   return (
     <Container>
