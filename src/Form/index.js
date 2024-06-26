@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styled, { css } from "styled-components";
 
 const Input = styled.input`
@@ -43,7 +43,10 @@ const Button = styled.button`
 
 const Form = ({ addNewTask }) => {
   const [newTaskContent, setNewTaskContent] = useState("");
-
+  const inputRef = useRef(null);
+  const focusInput = () => {
+    inputRef.current.focus();
+  };
   const onFormSubmit = (event) => {
     event.preventDefault();
     addNewTask(newTaskContent.trim());
@@ -59,7 +62,9 @@ const Form = ({ addNewTask }) => {
         autoFocus
         onChange={({ target }) => setNewTaskContent(target.value)}
       />
-      <Button>Dodaj zadanie</Button>
+      <Button onClick={focusInput} ref={inputRef}>
+        Dodaj zadanie
+      </Button>
       <Button primary>Główny pstrokaty przycisk</Button>
     </FormStyled>
   );

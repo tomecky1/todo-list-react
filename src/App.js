@@ -7,49 +7,53 @@ import Container from "./Container";
 import { useEffect, useState } from "react";
 
 function App() {
-
   const localStorageTasks = JSON.parse(localStorage.getItem("tasks"));
   console.log(localStorageTasks);
   const [hideDone, setHideDone] = useState(false);
-  const [tasks, setTasks] = useState([
-    { id: 1, content: "Zrobić pranie", done: false },
-    { id: 2, content: "Zrobić obiad", done: true },
-    { id: 3, content: "Usmażyc frytki", done: false }
-  ],
+  const [tasks, setTasks] = useState(
+    [
+      { id: 1, content: "Zrobić pranie", done: false },
+      { id: 2, content: "Zrobić obiad", done: true },
+      { id: 3, content: "Usmażyc frytki", done: false },
+    ],
 
-    localStorageTasks || []);
+    localStorageTasks || []
+  );
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
   const toggleHideDone = () => {
-    setHideDone(hideDone => !hideDone);
+    setHideDone((hideDone) => !hideDone);
   };
 
   const removeTask = (id) => {
-    setTasks(tasks => tasks.filter(task => task.id !== id));
+    setTasks((tasks) => tasks.filter((task) => task.id !== id));
   };
 
   const toggleTaskDone = (id) => {
-    setTasks(tasks => tasks.map(task => {
-      if (task.id === id) {
-        return { ...task, done: !task.done }
-      };
-      return task;
-
-    }))
+    setTasks((tasks) =>
+      tasks.map((task) => {
+        if (task.id === id) {
+          return { ...task, done: !task.done };
+        }
+        return task;
+      })
+    );
   };
 
   const setAllDone = () => {
-    setTasks(tasks => tasks.map(task => ({
-      ...task,
-      done: true,
-    })))
+    setTasks((tasks) =>
+      tasks.map((task) => ({
+        ...task,
+        done: true,
+      }))
+    );
   };
 
   const addNewTask = (newTaskContent) => {
-    setTasks(tasks => [
+    setTasks((tasks) => [
       ...tasks,
       {
         content: newTaskContent,
@@ -68,11 +72,26 @@ function App() {
       />
       <Section
         title="Lista zadań:"
-        extraHeaderContent={<Buttons tasks={tasks} hideDone={hideDone} toggleHideDone={toggleHideDone} setAllDone={setAllDone} />}
-        children={<Tasks tasks={tasks} hideDone={hideDone} removeTask={removeTask} toggleTaskDone={toggleTaskDone} localStorageTasks={localStorageTasks} />}
+        extraHeaderContent={
+          <Buttons
+            tasks={tasks}
+            hideDone={hideDone}
+            toggleHideDone={toggleHideDone}
+            setAllDone={setAllDone}
+          />
+        }
+        children={
+          <Tasks
+            tasks={tasks}
+            hideDone={hideDone}
+            removeTask={removeTask}
+            toggleTaskDone={toggleTaskDone}
+            localStorageTasks={localStorageTasks}
+          />
+        }
       />
     </Container>
   );
-};
+}
 
 export default App;
