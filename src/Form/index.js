@@ -56,15 +56,14 @@ const Form = ({ addNewTask }) => {
   return (
     <FormStyled onSubmit={onFormSubmit}>
       <Input
+        ref={inputRef}
         value={newTaskContent}
         type="text"
         placeholder="Co jest do zrobienia?"
         autoFocus
         onChange={({ target }) => setNewTaskContent(target.value)}
       />
-      <Button onClick={focusInput} ref={inputRef}>
-        Dodaj zadanie
-      </Button>
+      <Button onClick={focusInput}>Dodaj zadanie</Button>
       <Button primary>Główny pstrokaty przycisk</Button>
     </FormStyled>
   );
