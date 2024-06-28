@@ -1,7 +1,13 @@
 import { TasksWrapper } from "./styled";
 import { Items, Content, Button } from "./styled";
 
-const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
+const Tasks = ({
+  tasks,
+  hideDone,
+  removeTask,
+  toggleTaskDone,
+  localStorage,
+}) => (
   <TasksWrapper>
     {tasks.map((task) => (
       <Items hidden={task.done && hideDone}>
