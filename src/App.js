@@ -4,7 +4,7 @@ import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTasks } from "./useTasks";
 
 function App() {
