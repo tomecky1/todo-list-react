@@ -10,6 +10,7 @@ const Input = styled.input`
 const FormStyled = styled.form`
   display: flex;
   justify-content: space-around;
+  padding: 20px;
 `;
 
 const Button = styled.button`
@@ -61,10 +62,10 @@ const Form = ({ addNewTask }) => {
         type="text"
         placeholder="Co jest do zrobienia?"
         autoFocus
+        required
         onChange={({ target }) => setNewTaskContent(target.value)}
       />
       <Button onClick={focusInput}>Dodaj zadanie</Button>
-      <Button primary>Główny pstrokaty przycisk</Button>
     </FormStyled>
   );
 };

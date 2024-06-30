@@ -15,23 +15,6 @@ body {
   background-color: #ddd;
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.header {
-  padding: 20px 0;
-}
-
-.section {
-  display: grid;
-  grid-template-columns: 100%;
-  /* grid-template-rows: repeat(2, 1fr); */
-  background-color: #fff;
-  margin-bottom: 20px;
-}
-
 .section__title {
   padding: 20px;
 }
@@ -45,12 +28,6 @@ body {
   padding: 10px 20px;
   margin-top: 20px;
   background-color: #fff;
-}
-
-.buttons {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 .section__item--h2 {
