@@ -1,12 +1,11 @@
-import Form from "./Form";
-import Tasks from "./Tasks";
-import Buttons from "./Buttons";
-import Section from "./Section";
-import Header from "./Header";
-import Container from "./Container";
-import { useTasks } from "./useTasks";
+import Form from "../../features/tasks/Form/index";
+import Buttons from "../../features/tasks/Buttons/index";
+import Section from "../../common/Section/index";
+import Header from "../../common/Header/index";
+import Container from "../../common/Container";
+import { useTasks } from "../../useTasks";
 
-function App() {
+function Tasks() {
   const {
     tasks,
     hideDone,
@@ -48,4 +47,4 @@ function App() {
   );
 }
 
-export default App;
+export default Tasks;
