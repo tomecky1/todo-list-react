@@ -4,6 +4,7 @@ import Section from "../../common/Section/index";
 import Header from "../../common/Header/index";
 import Container from "../../common/Container";
 import { useTasks } from "../../useTasks";
+import TaskList from "./TaskList";
 
 function Tasks() {
   const {
@@ -34,7 +35,7 @@ function Tasks() {
           />
         }
         children={
-          <Tasks
+          <TaskList
             tasks={tasks}
             hideDone={hideDone}
             removeTask={removeTask}

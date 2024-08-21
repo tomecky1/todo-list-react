@@ -4,7 +4,6 @@ const StyledSection = styled.section`
   display: grid;
   grid-template-columns: 100%;
   /* grid-template-rows: repeat(2, 1fr); */
-  background-color: #fff;
   margin-bottom: 20px;
 `;
 
