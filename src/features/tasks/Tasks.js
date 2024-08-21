@@ -1,6 +1,6 @@
-import Form from "../../features/tasks/Form/index";
-import Buttons from "../../features/tasks/Buttons/index";
-import Section from "../../common/Section/index";
+import Form from "../../features/tasks/Form/";
+import Buttons from "../../features/tasks/Buttons/";
+import Section from "../../common/Section/";
 import Header from "../../common/Header/index";
 import Container from "../../common/Container";
 import { useTasks } from "../../useTasks";

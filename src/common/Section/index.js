@@ -15,10 +15,8 @@ const StyledButtons = styled.button`
 
 const Section = ({ title, children, extraHeaderContent }) => (
   <StyledSection>
-    <StyledButtons>
-      <h2 className="section__title section__item--h2">{title}</h2>
-      {extraHeaderContent}
-    </StyledButtons>
+    <h2 className="section__title section__item--h2">{title}</h2>
+    {extraHeaderContent}
     {children}
   </StyledSection>
 );
