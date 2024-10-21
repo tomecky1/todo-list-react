@@ -8,41 +8,22 @@ import TaskList from "./TaskList";
 
 function Tasks() {
   const {
-    tasks,
-    hideDone,
-    removeTask,
-    toggleTaskDone,
-    toggleHideDone,
+    //  tasks,
+    // hideDone,
+    // removeTask,
+
+    // toggleHideDone,
     setAllDone,
-    addNewTask,
   } = useTasks();
 
   return (
     <Container>
       <Header />
-      <Section
-        title="Dodaj nowe zadanie"
-        children={<Form addNewTask={addNewTask} />}
-      />
+      <Section title="Dodaj nowe zadanie" children={<Form />} />
       <Section
         title="Lista zadań:"
-        extraHeaderContent={
-          <Buttons
-            tasks={tasks}
-            hideDone={hideDone}
-            toggleHideDone={toggleHideDone}
-            setAllDone={setAllDone}
-          />
-        }
-        children={
-          <TaskList
-            tasks={tasks}
-            hideDone={hideDone}
-            removeTask={removeTask}
-            toggleTaskDone={toggleTaskDone}
-            localStorageTasks={localStorage}
-          />
-        }
+        extraHeaderContent={<Buttons setAllDone={setAllDone} />}
+        children={<TaskList localStorageTasks={localStorage} />}
       />
     </Container>
   );

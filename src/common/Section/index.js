@@ -7,11 +7,11 @@ const StyledSection = styled.section`
   margin-bottom: 20px;
 `;
 
-const StyledButtons = styled.button`
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-`;
+// const StyledButtons = styled.button`
+//   display: flex;
+//   align-items: center;
+//   flex-wrap: wrap;
+// `;
 
 const Section = ({ title, children, extraHeaderContent }) => (
   <StyledSection>
