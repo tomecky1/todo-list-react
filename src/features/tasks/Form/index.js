@@ -20,6 +20,7 @@ const Button = styled.button`
   border: none;
   background-color: hsl(180, 100%, 25%);
   color: #fff;
+  font-size: small;
   font-weight: 700;
   padding: 6px 8px;
   cursor: pointer;
