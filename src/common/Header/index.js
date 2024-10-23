@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledHeader = styled.header`
-  padding: 20px 0;
+  padding-left: 20px;
 `;
 
 const Header = () => (
