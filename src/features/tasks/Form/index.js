@@ -13,6 +13,7 @@ const FormStyled = styled.form`
   display: flex;
   justify-content: space-around;
   padding: 20px;
+  background: white;
 `;
 
 const Button = styled.button`
@@ -60,7 +61,7 @@ const Form = () => {
       addTask({
         content: newTaskContent.trim(),
         done: false,
-        id: nanoid(),
+        id: nanoid(1),
       })
     );
 

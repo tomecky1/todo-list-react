@@ -4,6 +4,7 @@ import Section from "../../common/Section/";
 import Header from "../../common/Header/index";
 import Container from "../../common/Container";
 import TaskList from "./TaskList";
+import { StyledButtons } from "../../common/Section/";
 
 function Tasks() {
   return (

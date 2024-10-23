@@ -43,10 +43,3 @@ export const {
 } = tasksSlice.actions;
 export const selectTasks = (state) => state.tasks;
 export default tasksSlice.reducer;
-
-console.log(
-  tasksSlice.reducer(
-    { tasks: [] },
-    addTask({ content: "Nauczyć się Reduxa", done: true })
-  )
-);

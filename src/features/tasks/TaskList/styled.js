@@ -3,8 +3,8 @@ import styled, { css } from "styled-components";
 export const TasksWrapper = styled.ul`
   list-style: none;
   padding: 0;
-  text-align: left;
   transition: 1s;
+  text-align: left;
 `;
 
 export const Items = styled.li`
@@ -15,6 +15,7 @@ export const Items = styled.li`
   flex-wrap: wrap;
   border-bottom: 3px solid #f2f2f2;
   padding: 20px;
+  align-items: center;
 
   ${({ hidden }) =>
     hidden &&

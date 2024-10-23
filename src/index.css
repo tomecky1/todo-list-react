@@ -16,7 +16,10 @@ body {
 }
 
 .section__title {
+  display: flex;
+  /* flex: 1 0; */
   padding: 20px;
+  background: white;
 }
 
 .section__item--h2 {
@@ -31,11 +34,19 @@ body {
 }
 
 .section__item--h2 {
+  display: inline;
   flex-grow: 2;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  flex-wrap: wrap;
+  transition: 1s;
+}
+
 .buttonhideDone {
-  flex-grow: 1;
   border: 0;
   color: teal;
   background-color: #fff;
@@ -47,7 +58,6 @@ body {
 }
 
 .buttonDoneAllTasks {
-  flex-grow: 1;
   border: 0;
   color: teal;
   background-color: #fff;
@@ -65,17 +75,19 @@ body {
 .list {
   list-style: none;
   padding: 0;
-  text-align: left;
+  text-align: start;
   transition: 1s;
+  margin-top: 0;
 }
 
 .list__item {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  align-items: center;
-  grid-gap: 10px;
+  align-self: start;
+  grid-gap: 20px;
   border-bottom: 2px solid #ddd;
   padding: 10px;
+  text-align: left;
 }
 
 .list__item--done {
