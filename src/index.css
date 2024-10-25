@@ -58,9 +58,9 @@ body {
 }
 
 .buttonDoneAllTasks {
-  border: 0;
+  border: 2px solid black;
   color: teal;
-  background-color: #fff;
+  background-color: gray(204);
   transition: 1.5s all;
 }
 
@@ -68,9 +68,9 @@ body {
   color: hsl(180, 100%, 35%);
 }
 
-.buttonDoneAllTasks:disabled {
-  display: none;
-}
+/*.buttonDoneAllTasks:disabled {*/
+/*  display: none;*/
+/*}*/
 
 .list {
   list-style: none;

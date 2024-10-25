@@ -8,7 +8,7 @@ const Buttons = () => {
   const { tasks, hideDone } = useSelector(selectTasks);
   const dispatch = useDispatch();
 
-  if (tasks.Length === 0) {
+  if (tasks.length === 0) {
     return null;
   }
   return (
@@ -20,9 +20,9 @@ const Buttons = () => {
         {hideDone ? "Pokaż" : "Ukryj"} ukończone
       </button>
       <button
+        disabled={tasks.every(({ done }) => done)}
         onClick={() => dispatch(setAllDone())}
         className="buttonDoneAllTasks"
-        disabled={tasks.every(({ done }) => done)}
       >
         Ukończ wszystkie
       </button>
