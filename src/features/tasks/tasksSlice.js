@@ -1,39 +1,49 @@
-import { createSlice } from "@reduxjs/toolkit";
+import {createSlice, nanoid} from "@reduxjs/toolkit";
 
 const tasksSlice = createSlice({
-  name: "tasks",
-  initialState: {
-    tasks: [],
-    hideDone: false,
-  },
-  reducers: {
-    addTask: ({ tasks }, { payload: task }) => {
-      tasks.push(task);
+    name: "tasks",
+    initialState: {
+        tasks: [],
+        hideDone: false,
+        id: nanoid()
     },
-    toggleHideDone: (state) => {
-      state.hideDone = !state.hideDone;
+    reducers: {
+        addTask: ({tasks}, {payload: task}) => {
+            tasks.push(task);
+        },
+        toggleHideDone: (state) => {
+            state.hideDone = !state.hideDone;
+        },
+        toggleTaskDone: (state, action) => {
+            const index = state.tasks.findIndex((task) => task.id === action.payload);
+            state.tasks[index].done = !state.tasks[index].done;
+        },
+        removeTask: ({tasks}, {payload: taskId}) => {
+            tasks.splice(taskId, 1);
+        },
+        setAllDone: (state) => {
+            for (const task of state.tasks) {
+                task.done = true;
+            }
+        },
+        fetchExampleTasks: () => {
+        },
+        setTasks: (state, {payload: tasks}) => {
+            state.tasks = tasks
+        }
+
+
     },
-    toggleTaskDone: (state, action) => {
-      const index = state.tasks.findIndex((task) => task.id === action.payload);
-      state.tasks[index].done = !state.tasks[index].done;
-    },
-    removeTask: ({ tasks }, { payload:taskId }) => {
-      tasks.splice(taskId, 1);
-    },
-    setAllDone: (state) => {
-      for (const task of state.tasks) {
-        task.done = true;
-      }
-    },
-  },
 });
 
 export const {
-  addTask,
-  toggleHideDone,
-  toggleTaskDone,
-  removeTask,
-  setAllDone,
+    addTask,
+    toggleHideDone,
+    toggleTaskDone,
+    removeTask,
+    setAllDone,
+    fetchExampleTasks,
+    setTasks
 } = tasksSlice.actions;
 export const selectTasks = (state) => state.tasks;
 export default tasksSlice.reducer;
