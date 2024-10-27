@@ -12,11 +12,12 @@ const Buttons = () => {
     return (
         <div className="buttons">
             <button
+                className="buttonGetTasks"
                 onClick={() => dispatch(fetchExampleTasks())}>
                 Pobierz przykładowe zadania
             </button>
             <button
-                className="buttonhideDone"
+                className="buttonHideDone"
                 onClick={() => dispatch(toggleHideDone())}
             >
                 {hideDone ? "Pokaż" : "Ukryj"} ukończone

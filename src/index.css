@@ -46,14 +46,25 @@ body {
     transition: 1s;
 }
 
-.buttonhideDone {
+.buttonGetTasks {
     border: 0;
     color: teal;
     background-color: #fff;
     transition: 1.5s all;
 }
 
-.buttonhideDone:hover {
+.buttonGetTasks:hover {
+    color: hsl(180, 100%, 35%);
+}
+
+.buttonHideDone {
+    border: 0;
+    color: teal;
+    background-color: #fff;
+    transition: 1.5s all;
+}
+
+.buttonHideDone:hover {
     color: hsl(180, 100%, 35%);
 }
 
