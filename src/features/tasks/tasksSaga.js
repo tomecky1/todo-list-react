@@ -22,7 +22,7 @@ function* fetchExampleTasksHandler() {
 }
 
 function* saveTasksInLocalStorageHandler() {
-  const tasks = yield select(selectTasks);
+  const { tasks } = yield select(selectTasks);
   if (tasks && tasks.length > 0) {
     yield call(saveTasksInLocalStorage, tasks);
   }
