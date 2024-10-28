@@ -5,6 +5,8 @@ const StyledSection = styled.section`
   grid-template-columns: 100%;
   /* grid-template-rows: repeat(2, 1fr); */
   margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const StyledButtons = styled.button`

@@ -4,9 +4,9 @@ const StyledHeader = styled.header`
   padding-left: 20px;
 `;
 
-const Header = () => (
+const Header = ({ title }) => (
   <StyledHeader>
-    <h1>Lista zadań do zrobienia</h1>
+    <h1>{title}</h1>
   </StyledHeader>
 );
 
