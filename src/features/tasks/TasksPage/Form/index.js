@@ -3,11 +3,7 @@ import { useState, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { addTask } from "../../tasksSlice";
 import styled, { css } from "styled-components";
-const Input = styled.input`
-  border: 2px solid #f2f2f2;
-  width: 85%;
-  height: 40px;
-`;
+import { Input } from "../../Input";
 
 const FormStyled = styled.form`
   display: flex;

@@ -2,25 +2,26 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import {
   HashRouter,
-  NavLink,
   Redirect,
 } from "react-router-dom/cjs/react-router-dom.min";
 import TaskPage from "./features/tasks/TaskPage";
 import TasksPage from "./features/tasks/TasksPage";
 import Author from "./features/author/Author";
+import { StyledNavLinks } from "./styled";
+
 const App = () => (
   <HashRouter>
     <nav>
       <ul>
         <li>
-          <NavLink activeClassName="active" to="/zadania">
+          <StyledNavLinks activeClassName="active" to="/zadania">
             Zadania
-          </NavLink>
+          </StyledNavLinks>
         </li>
         <li>
-          <NavLink activeClassName="active" to="/author">
+          <StyledNavLinks activeClassName="active" to="/author">
             O autorze
-          </NavLink>
+          </StyledNavLinks>
         </li>
       </ul>
       <Switch>
