@@ -7,12 +7,12 @@ import {
 import TaskPage from "./features/tasks/TaskPage";
 import TasksPage from "./features/tasks/TasksPage";
 import Author from "./features/author/Author";
-import { StyledNavLinks } from "./styled";
+import { Navigation, StyledNavLinks } from "./styled";
 
 const App = () => (
   <HashRouter>
     <nav>
-      <ul>
+      <Navigation>
         <li>
           <StyledNavLinks activeClassName="active" to="/zadania">
             Zadania
@@ -23,7 +23,7 @@ const App = () => (
             O autorze
           </StyledNavLinks>
         </li>
-      </ul>
+      </Navigation>
       <Switch>
         <Route path="/zadania/:id">
           <TaskPage />
