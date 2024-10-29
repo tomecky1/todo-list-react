@@ -1,13 +1,28 @@
 import Container from "../../common/Container";
 import Header from "../../common/Header";
 import Section from "../../common/Section";
+import { StyledImage } from "./styled";
 
 function Author() {
   return (
     <Container>
       <Header title="O autorze" />
       <Section
-        title="Tomasz Piotrowski"
+        title={
+          <a
+            href="https://todo-zrozumiec-react.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Tomasz Piotrowski - moja inna lista zadań w React'cie
+          </a>
+        }
+        extraHeaderContent={
+          <StyledImage
+            src="https://image.freepik.com/free-vector/cute-cartoon-beaver-listening-music-with-headphone_290315-1409.jpg"
+            alt="bober"
+          />
+        }
         children={
           <p>
             Cześć, jestem technikiem informatyki. Pracowałem troszkę w serwisie

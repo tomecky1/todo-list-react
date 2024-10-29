@@ -21,7 +21,6 @@ const Button = styled.button`
   padding: 6px 8px;
   cursor: pointer;
   transition: 1.5s all;
-  height: 40px;
 
   &:hover {
     transform: scale(1.1);
