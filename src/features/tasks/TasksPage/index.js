@@ -24,14 +24,11 @@ function TasksPage() {
             Pobierz przykładowe zadania
           </button>
         }
-        children={<Form />}
       />
+      <Form />
       <Section title="Wyszukiwarka" children={<Search />} />
-      <Section
-        title="Lista zadań:"
-        extraHeaderContent={<Buttons />}
-        children={<TaskList localStorageTasks={localStorage} />}
-      />
+      <Section title="Lista zadań:" extraHeaderContent={<Buttons />} />
+      <TaskList localStorageTasks={localStorage} />
     </Container>
   );
 }
