@@ -16,7 +16,6 @@ body {
 }
 
 .section__title {
-  /* flex: 1 0; */
   padding: 20px;
   background: white;
 }
@@ -39,7 +38,7 @@ body {
 .buttons {
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: flex-end;
   flex-wrap: wrap;
   transition: 1s;
 }
@@ -49,6 +48,11 @@ body {
   color: teal;
   background-color: #fff;
   transition: 1.5s all;
+}
+
+.buttonGetTasks:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .buttonGetTasks:hover {
@@ -166,4 +170,12 @@ body {
   .js-buttons {
     text-align: center;
   }
+}
+
+.loadingText {
+  color: rgb(85, 85, 85);
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+  align-content: center;
 }
