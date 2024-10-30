@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import {
-  HashRouter,
+  BrowserRouter,
   Redirect,
 } from "react-router-dom/cjs/react-router-dom.min";
 import TaskPage from "./features/tasks/TaskPage";
@@ -10,7 +10,7 @@ import Author from "./features/author/Author";
 import { Navigation, StyledNavLinks } from "./styled";
 
 const App = () => (
-  <HashRouter>
+  <BrowserRouter basename="/todo-list-react">
     <nav>
       <Navigation>
         <li>
@@ -39,7 +39,7 @@ const App = () => (
         </Route>
       </Switch>
     </nav>
-  </HashRouter>
+  </BrowserRouter>
 );
 
 export default App;
