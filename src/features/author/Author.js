@@ -1,11 +1,11 @@
-import Container from "../../common/Container";
+import { StyledContainer } from "../../common/Container/styled";
 import Header from "../../common/Header";
 import Section from "../../common/Section";
 import { StyledImage } from "./styled";
 
 function Author() {
   return (
-    <Container>
+    <StyledContainer>
       <Header title="O autorze" />
       <Section
         title={
@@ -33,7 +33,7 @@ function Author() {
           </p>
         }
       />
-    </Container>
+    </StyledContainer>
   );
 }
 
