@@ -23,16 +23,15 @@ function Author() {
             alt="bober"
           />
         }
-        children={
-          <p>
-            Cześć, jestem technikiem informatyki. Pracowałem troszkę w serwisie
-            IT duzej firmy , ale nie wytrzymałem presji psychicznej. Pózniej 9
-            lat jako specjalista ds. archiwizacji dokumentacji medycznej w znowu
-            firmie ogólnopolskiej, ostatnio mnie zwolniono i uczę się
-            programowania frontendowego od 3 lat.😍
-          </p>
-        }
-      />
+      >
+        <p>
+          Cześć, jestem technikiem informatyki. Pracowałem troszkę w serwisie IT
+          duzej firmy , ale nie wytrzymałem presji psychicznej. Pózniej 9 lat
+          jako specjalista ds. archiwizacji dokumentacji medycznej w znowu
+          firmie ogólnopolskiej, ostatnio mnie zwolniono i uczę się
+          programowania frontendowego od 3 lat.😍
+        </p>
+      </Section>
     </StyledContainer>
   );
 }
