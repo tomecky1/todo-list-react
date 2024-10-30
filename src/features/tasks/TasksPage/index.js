@@ -29,10 +29,10 @@ const TasksPage = () => {
             </button>
           )
         }
+        children={<Form />}
       />
-      <Form />
-      <Section title="Wyszukiwarka" />
-      <Search />
+
+      <Section title="Wyszukiwarka" children={<Search />} />
       <Section title="Lista zadań:" extraHeaderContent={<Buttons />} />
       <TaskList />
     </Container>

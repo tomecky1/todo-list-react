@@ -8,7 +8,6 @@ const Buttons = () => {
 
   return (
     <div className="buttons">
-      <div className="filler"></div>
       <button
         className="buttonHideDone"
         onClick={() => dispatch(toggleHideDone())}
