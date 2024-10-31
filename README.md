@@ -44,9 +44,13 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 **Technology used in this project includes:**
 
-- JavaScript ECMAScript15
+- JavaScript
 - CSS 3
 - HTML 5
 - Webpack
 - Babel
 - Node.js
+- React Router
+- Redux
+- Redux Toolkit
+- Redux Saga
