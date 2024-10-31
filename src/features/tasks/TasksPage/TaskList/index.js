@@ -7,7 +7,7 @@ import {
 } from "../../tasksSlice";
 import { Button, Content, Items, TasksWrapper, StyledLink } from "./styled";
 import { useDispatch, useSelector } from "react-redux";
-import searchQueryParam from "../searchQueryParamName";
+import searchQueryParam from "../hooks/searchQueryParamName";
 
 const TaskList = () => {
   const location = useLocation();

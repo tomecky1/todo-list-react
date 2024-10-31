@@ -23,7 +23,14 @@ const TasksPage = () => {
           ) : (
             <button
               className="buttonGetTasks"
-              onClick={() => dispatch(fetchExampleTasks())}
+              onClick={async () => {
+                try {
+                  await dispatch(fetchExampleTasks());
+                } catch (error) {
+                  console.error("Błąd podczas pobierania zadań:", error);
+                  alert("Sorka, nie udało się pobrać przykładowych zadań 😒");
+                }
+              }}
             >
               Pobierz przykładowe zadania
             </button>
