@@ -19,7 +19,7 @@ const App = () => (
           </StyledNavLinks>
         </li>
         <li>
-          <StyledNavLinks activeClassName="active" to="/author">
+          <StyledNavLinks activeClassName="active" to="/autor">
             O autorze
           </StyledNavLinks>
         </li>
@@ -31,7 +31,7 @@ const App = () => (
         <Route path="/zadania">
           <TasksPage />
         </Route>
-        <Route path="/author">
+        <Route path="/autor">
           <Author />
         </Route>
         <Route path="/">
