@@ -15,7 +15,7 @@ export const StyledButtons = styled.button`
 `;
 
 interface SectionProps {
-    title: string,
+    title: ReactNode,
     extraHeaderContent?: ReactNode,
     children: ReactNode,
 }
