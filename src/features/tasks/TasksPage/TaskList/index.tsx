@@ -4,6 +4,7 @@ import {Button, Content, Items, StyledLink, TasksWrapper} from "./styled";
 import {useSelector} from "react-redux";
 import searchQueryParam from "../hooks/searchQueryParamName";
 import {useAppDispatch, useAppSelector} from "../../../../hooks";
+import {RootState} from "../../../../store";
 
 
 const TaskList = () => {
@@ -12,7 +13,7 @@ const TaskList = () => {
     const query = searchParams.get(searchQueryParam);
 
     const hideDone = useAppSelector(selectHideDone);
-    const tasks = useSelector((state) => selectTasksByQuery(state, query));
+    const tasks = useSelector((state:RootState) => selectTasksByQuery(state, query));
     const dispatch = useAppDispatch();
     return (
         <>

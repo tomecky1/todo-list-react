@@ -1,14 +1,29 @@
-import { createSlice, nanoid } from "@reduxjs/toolkit";
-import { getTasksFromLocalStorage } from "./tasksLocalStorage";
+import {createSlice, nanoid} from "@reduxjs/toolkit";
+import {getTasksFromLocalStorage} from "./tasksLocalStorage";
+import {RootState} from "../../store";
+
+interface Task {
+  id: string;
+  content: string;
+  done: boolean;
+}
+
+interface TasksState {
+  tasks: Task[];
+  hideDone: boolean;
+  loading: boolean;
+}
+
+
 
 const tasksSlice = createSlice({
   name: "tasks",
   initialState: {
-    tasks: getTasksFromLocalStorage(),
+    tasks: getTasksFromLocalStorage() as Task[],
     hideDone: false,
     loading: false,
     id: nanoid(),
-  },
+  } as TasksState,
   reducers: {
     addTask: ({ tasks }, { payload: task }) => {
       tasks.push(task);
@@ -34,10 +49,11 @@ const tasksSlice = createSlice({
     fetchExampleTasks: (state) => {
       state.loading = true;
     },
-    setTasks: (state, { payload: tasks }) => {
-      state.tasks = tasks;
+    setTasks: (state, { payload }: { payload: Task[] }) => {
+      state.tasks = payload;
       state.loading = false;
     },
+
   },
 });
 
@@ -50,19 +66,20 @@ export const {
   fetchExampleTasks,
   setTasks,
 } = tasksSlice.actions;
-const selectTasksState = (state) => state.tasks;
+const selectTasksState = (state: RootState) => state.tasks;
 
-export const selectTasks = (state) => selectTasksState(state);
-export const getTaskById = (state, taskId) =>
-  selectTasks(state).tasks.find(({ id }) => id === taskId);
-export const selectTasksByQuery = (state, query) => {
+export const selectTasks = (state: RootState) => state.tasks;
+export const getTaskById = (state: RootState, taskId: string) =>
+    selectTasks(state).tasks.find(({ id }) => id === taskId);
+
+export const selectTasksByQuery = (state:RootState, query: string | null) => {
   const tasks = selectTasks(state).tasks;
   if (!query || query.trim() === "") return tasks;
   return tasks.filter((task) =>
-    task.content.toUpperCase().includes(query.trim().toUpperCase())
+    task.content?.toUpperCase().includes(query.trim().toUpperCase())
   );
 };
-export const selectHideDone = (state) => selectTasksState(state).hideDone;
-export const selectLoading = (state) => selectTasksState(state).loading;
+export const selectHideDone = (state:RootState) => selectTasksState(state).hideDone;
+export const selectLoading = (state: RootState) => selectTasksState(state).loading;
 
 export default tasksSlice.reducer;
