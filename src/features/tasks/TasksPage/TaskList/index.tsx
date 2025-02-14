@@ -3,16 +3,7 @@ import {removeTask, selectHideDone, selectTasksByQuery, toggleTaskDone,} from ".
 import {Button, Content, Items, StyledLink, TasksWrapper} from "./styled";
 import {useDispatch, useSelector} from "react-redux";
 import searchQueryParam from "../hooks/searchQueryParamName";
-import {Task} from "redux-saga";
 
-interface TaskListProps {
-    tasks: Task[];
-    hideDone: boolean;
-    query: string;
-    onRemove: (id: string) => void;
-    onToggleDone: (id: string) => void;
-    onSearch: (query: string) => void;
-}
 
 const TaskList = () => {
     const location = useLocation();

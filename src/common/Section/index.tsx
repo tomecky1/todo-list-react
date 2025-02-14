@@ -1,21 +1,8 @@
-import styled from "styled-components";
-import {SectionHeader} from "./styled";
+import {SectionHeader, StyledSection} from "./styled";
 import {ReactNode} from "react";
 
-const StyledSection = styled.section`
-    /* display: grid; */
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-`;
-
-export const StyledButtons = styled.button`
-    display: inline-block;
-    align-items: center;
-    flex-wrap: nowrap;
-`;
-
-interface SectionProps {
-    title: ReactNode,
+export interface SectionProps {
+    title: string,
     extraHeaderContent?: ReactNode,
     children: ReactNode,
 }
