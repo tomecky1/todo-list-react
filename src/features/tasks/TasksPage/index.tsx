@@ -1,4 +1,3 @@
-import {useDispatch, useSelector} from "react-redux";
 import {fetchExampleTasks, selectLoading} from "../tasksSlice";
 import Form from "./Form";
 import Buttons from "./Buttons";
@@ -7,10 +6,11 @@ import Header from "../../../common/Header";
 import Container from "../../../common/Container";
 import {Search} from "./Search";
 import TaskList from "./TaskList";
+import {useAppDispatch, useAppSelector} from "../../../hooks";
 
 const TasksPage = () => {
-    const dispatch = useDispatch();
-    const loading = useSelector(selectLoading);
+    const dispatch = useAppDispatch();
+    const loading = useAppSelector(selectLoading);
 
     return (
         <Container>

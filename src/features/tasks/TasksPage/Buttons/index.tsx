@@ -1,10 +1,10 @@
 import React from "react";
-import {useDispatch, useSelector} from "react-redux";
 import {selectTasks, setAllDone, toggleHideDone} from "../../tasksSlice";
+import {useAppDispatch, useAppSelector} from "../../../../hooks";
 
 const Buttons = () => {
-    const {tasks, hideDone} = useSelector(selectTasks);
-    const dispatch = useDispatch();
+    const {tasks, hideDone} = useAppSelector(selectTasks);
+    const dispatch = useAppDispatch();
 
     interface Props {
         done: boolean;
